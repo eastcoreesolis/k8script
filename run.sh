@@ -11,3 +11,10 @@ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/miniku
 minikube version > ver.txt
 sudo minikube start --vm-driver=none
 minikube status > ver2.txt
+sleep 2m
+git clone "https://github.com/eastcoreesolis/k8script.git"
+kubectl create -f ./k8script/namespace.yml
+kubectl --namespace=timeserv create -f ./k8script/service.yml
+kubectl --namespace=timeserv create -f ./k8script/service.yml
+sleep 1m
+kubectl --namespace=timeserv get pods > podlog.txt
