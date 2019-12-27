@@ -7,3 +7,4 @@ sudo apt-get update && sudo apt-get install docker.io -y
 curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
 minikube version > ver.txt
 minikube start --vm-driver=none
+minikube status > ver2.txt
