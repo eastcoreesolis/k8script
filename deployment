@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: timeserv
+  labels:
+    app: timeserv
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: timeserv
+  template:
+    metadata:
+      labels:
+        app: timeserv
+    spec:
+      containers:
+      - name: timeserv
+        image: eastcoreesolis/timeserv:latest
+        ports:
+        - containerPort: 8080
