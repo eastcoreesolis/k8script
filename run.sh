@@ -18,7 +18,7 @@ git clone "https://github.com/eastcoreesolis/k8script.git"
 kubectl create -f ./k8script/namespace.yml >> log.txt
 kubectl --namespace=timeserv create -f ./k8script/service.yml >> log.txt
 kubectl --namespace=timeserv create -f ./k8script/deployment.yml >>log.txt
-echo "sleeping 30s..." >> log.txt
+echo "sleeping 45s..." >> log.txt
 sleep 45s
 echo "Check status..." >> log.txt
 kubectl --namespace=timeserv get pods >> log.txt
