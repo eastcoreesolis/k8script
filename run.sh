@@ -1,5 +1,7 @@
 #!/bin/bash
+echo "sleeping..." > sleeping.txt
 sleep 2m
+echo "end sleep." > end_sleep.txt
 sudo apt-get update -y
 curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
 chmod +x ./kubectl
