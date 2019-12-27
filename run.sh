@@ -27,9 +27,10 @@ echo "Creating App..." >> log.txt
 kubectl create -f ./k8script/namespace.yml >> log.txt
 kubectl --namespace=timeserv create -f ./k8script/service.yml >> log.txt
 kubectl --namespace=timeserv create -f ./k8script/deployment.yml >>log.txt
+echo "//" >> log.txt
 echo "sleeping 45s..." >> log.txt
 sleep 45s
 echo "sleep complete, checking status..." >> log.txt
 echo "//" >> log.txt
 kubectl --namespace=timeserv get pods >> log.txt
-echo "-Log End-..." > log.txt
+echo "-Log End-..." >> log.txt
