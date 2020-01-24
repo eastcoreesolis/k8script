@@ -21,7 +21,8 @@ echo "Set Hostname..." >> log.txt
 sudo hostnamectl set-hostname master-node
 
 echo "Init Head Network..." >> log.txt
-sudo kubeadm init --pod-network-cidr=10.244.0.0/16 >> joincmd.txt
+sudo kubeadm init --pod-network-cidr=10.244.0.0/16
+sudo kubeadm token create --print-join-command > joincmd.txt
 
 echo "Make $HOME/.kube..." >> log.txt
 mkdir -p $HOME/.kube
