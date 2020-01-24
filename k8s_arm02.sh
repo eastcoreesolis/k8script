@@ -27,8 +27,8 @@ if [ -f "$join" ]; then
     command $(cat /home/ubuntu/joincmd.txt)
 else 
     echo "$join does not exist" >> log.txt
-    echo "Sleeping 2m" >> log.txt
-    sleep 2m
+    echo "Sleeping 3m" >> log.txt
+    sleep 3m
     command $(cat /home/ubuntu/joincmd.txt) >> log.txt
 fi
 
