@@ -37,8 +37,8 @@ echo "//" >> log.txt
 echo "Sleeping 5s..." >> log.txt
 sleep 5s
 echo "//" >> log.txt
-scp -q -o StrictHostKeyChecking=no -i /home/ubuntu/sysdig.pem /home/ubuntu/arm01_ip.txt ubuntu@$(cat /home/ubuntu/arm01_ip.txt)":"
-scp -q -o StrictHostKeyChecking=no -i /home/ubuntu/sysdig.pem /home/ubuntu/arm02_ip.txt ubuntu@$(cat /home/ubuntu/arm02_ip.txt)":"
+scp -q -o StrictHostKeyChecking=no -i /home/ubuntu/sysdig.pem ./joincmd.txt ubuntu@$(cat /home/ubuntu/arm01_ip.txt)":"
+scp -q -o StrictHostKeyChecking=no -i /home/ubuntu/sysdig.pem ./joincmd.txt ubuntu@$(cat /home/ubuntu/arm02_ip.txt)":"
 
 echo "Getting App..." >> log.txt
 git clone "https://github.com/eastcoreesolis/k8script.git"
