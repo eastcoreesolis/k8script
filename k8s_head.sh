@@ -32,5 +32,19 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 echo "Make flannel network..." >> log.txt
 sudo kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
-
+echo "//" >> log.txt
+echo "Getting App..." >> log.txt
+git clone "https://github.com/eastcoreesolis/k8script.git"
+echo "//" >> log.txt
+echo "Creating App..." >> log.txt
+kubectl create -f ./k8script/namespace.yml >> log.txt
+kubectl --namespace=timeserv create -f ./k8script/service.yml >> log.txt
+kubectl --namespace=timeserv create -f ./k8script/deployment.yml >>log.txt
+echo "//" >> log.txt
+echo "Sleeping 45s..." >> log.txt
+sleep 45s
+echo "Checking pod status..." >> log.txt
+echo "//" >> log.txt
+kubectl --namespace=timeserv get pods >> log.txt
+echo "//" >> log.txt
 echo "-Log End-" >> log.txt
