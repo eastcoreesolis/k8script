@@ -20,4 +20,16 @@ sudo swapoff a
 echo "Set Hostname..." >> log.txt
 sudo hostnamectl set-hostname arm01-node
 
+echo "Check for join command..." >> log.txt
+join=/home/ubuntu/joincmd.txt
+if [ -f "$join" ]; then
+    echo "$join exist"
+    command $(cat /home/ubuntu/joincmd.txt)
+else 
+    echo "$join does not exist"
+    echo "Sleeping 30s"
+    sleep 30s
+    command $(cat /home/ubuntu/joincmd.txt)
+fi
+
 echo "-Log End-" >> log.txt
