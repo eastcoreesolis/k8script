@@ -49,7 +49,7 @@ kubectl create -f ./k8script/namespace.yml >> log.txt
 kubectl --namespace=timeserv create -f ./k8script/service.yml >> log.txt
 kubectl --namespace=timeserv create -f ./k8script/deployment.yml >>log.txt
 echo "//" >> log.txt
-echo "Sleeping 45s..." >> log.txt
+echo "Sleeping 2m..." >> log.txt
 sleep 45s
 echo "Checking pod status..." >> log.txt
 echo "//" >> log.txt
