@@ -23,13 +23,13 @@ sudo hostnamectl set-hostname arm01-node
 echo "Check for join command..." >> log.txt
 join=/home/ubuntu/joincmd.txt
 if [ -f "$join" ]; then
-    echo "$join exist"
+    echo "$join exist" >> log.txt
     command $(cat /home/ubuntu/joincmd.txt)
 else 
-    echo "$join does not exist"
-    echo "Sleeping 30s"
+    echo "$join does not exist" >> log.txt
+    echo "Sleeping 30s" >> log.txt
     sleep 30s
-    command $(cat /home/ubuntu/joincmd.txt)
+    command $(cat /home/ubuntu/joincmd.txt) >> log.txt
 fi
 
 echo "-Log End-" >> log.txt
