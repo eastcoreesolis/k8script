@@ -36,8 +36,6 @@ sudo kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Do
 
 echo "//" >> log.txt
 echo "Preparing to send files to Arms..." >> log.txt
-echo "Sleeping 5s..." >> log.txt
-sleep 5s
 echo "//" >> log.txt
 scp -q -o StrictHostKeyChecking=no -i /home/ubuntu/sysdig.pem ./joincmd.txt ubuntu@$(cat /home/ubuntu/arm01_ip.txt)":"
 scp -q -o StrictHostKeyChecking=no -i /home/ubuntu/sysdig.pem ./joincmd.txt ubuntu@$(cat /home/ubuntu/arm02_ip.txt)":"
