@@ -18,7 +18,7 @@ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/miniku
 minikube version >> log.txt
 echo "//" >> log.txt
 echo "Starting minikube..." >> log.txt
-minikube start --vm-driver=none
+sudo minikube start --vm-driver=none
 minikube status >> log.txt
 echo "//" >> log.txt
 echo "Getting App..." >> log.txt
