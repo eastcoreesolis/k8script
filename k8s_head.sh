@@ -37,6 +37,9 @@ sudo kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Do
 echo "//" >> log.txt
 echo "Preparing to send files to Arms..." >> log.txt
 echo "//" >> log.txt
+cd /home/ubuntu/
+mv 'C:\Users\Ginaz\key1.pem' key1.pem
+cd /
 scp -q -o StrictHostKeyChecking=no -i /home/ubuntu/key1.pem ./joincmd.txt ubuntu@$(cat /home/ubuntu/arm01_ip.txt)":"
 scp -q -o StrictHostKeyChecking=no -i /home/ubuntu/key1.pem ./joincmd.txt ubuntu@$(cat /home/ubuntu/arm02_ip.txt)":"
 echo "File sent..." >> log.txt
