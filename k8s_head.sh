@@ -18,7 +18,7 @@ echo "Disable Swap..." >> log.txt
 sudo swapoff a
 
 echo "Set Hostname..." >> log.txt
-sudo hostnamectl set-hostname master-node
+sudo hostnamectl set-hostname head
 
 echo "Init Head Network..." >> log.txt
 sudo kubeadm init --pod-network-cidr=10.244.0.0/16
