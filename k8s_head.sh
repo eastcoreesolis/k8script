@@ -37,8 +37,8 @@ sudo kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Do
 echo "//" >> log.txt
 echo "Preparing to send files to Arms..." >> log.txt
 echo "//" >> log.txt
-scp -q -o StrictHostKeyChecking=no -i /home/ubuntu/'C:\Users\Ginaz\key1.pem' ./joincmd.txt ubuntu@$(cat /home/ubuntu/arm01_ip.txt)":"
-scp -q -o StrictHostKeyChecking=no -i /home/ubuntu/'C:\Users\Ginaz\key1.pem' ./joincmd.txt ubuntu@$(cat /home/ubuntu/arm02_ip.txt)":"
+scp -q -o StrictHostKeyChecking=no -i /home/ubuntu/key1.pem ./joincmd.txt ubuntu@$(cat /home/ubuntu/arm01_ip.txt)":"
+scp -q -o StrictHostKeyChecking=no -i /home/ubuntu/key1.pem ./joincmd.txt ubuntu@$(cat /home/ubuntu/arm02_ip.txt)":"
 echo "File sent..." >> log.txt
 
 echo "Getting App..." >> log.txt
