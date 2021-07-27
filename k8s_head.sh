@@ -67,6 +67,7 @@ sleep 4m
 echo "Checking pod status..." >> log.txt
 echo "//" >> log.txt
 kubectl --namespace=timeserv get pods >> log.txt
+kubectl --namespace=tfinterview get pods >> log.txt
 
 echo "//" >> log.txt
 echo "-Log End-" >> log.txt
