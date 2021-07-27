@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tfinterview
+  labels:
+    app: tfinterview
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: tfinterview
+  template:
+    metadata:
+      labels:
+        app: tfinterview
+    spec:
+      containers:
+      - name: tfinterview
+        image: eastcoreesolis/core:1.6
+        ports:
+        - containerPort: 8080
