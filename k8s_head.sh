@@ -42,8 +42,11 @@ mv 'C:\Users\Ginaz\key1.pem' key1.pem
 cd /
 scp -q -o StrictHostKeyChecking=no -i /home/ubuntu/key1.pem ./joincmd.txt ubuntu@$(cat /home/ubuntu/arm01_ip.txt)":"
 scp -q -o StrictHostKeyChecking=no -i /home/ubuntu/key1.pem /home/ubuntu/payload.mp4 ubuntu@$(cat /home/ubuntu/arm01_ip.txt)":"
+scp -q -o StrictHostKeyChecking=no -i /home/ubuntu/key1.pem /home/ubuntu/corecommands ubuntu@$(cat /home/ubuntu/arm01_ip.txt)":"
+
 scp -q -o StrictHostKeyChecking=no -i /home/ubuntu/key1.pem ./joincmd.txt ubuntu@$(cat /home/ubuntu/arm02_ip.txt)":"
 scp -q -o StrictHostKeyChecking=no -i /home/ubuntu/key1.pem /home/ubuntu/payload.mp4 ubuntu@$(cat /home/ubuntu/arm02_ip.txt)":"
+scp -q -o StrictHostKeyChecking=no -i /home/ubuntu/key1.pem /home/ubuntu/corecommands ubuntu@$(cat /home/ubuntu/arm02_ip.txt)":"
 
 echo "File sent..." >> log.txt
 
