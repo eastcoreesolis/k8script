@@ -50,10 +50,17 @@ echo "File sent..." >> log.txt
 echo "Getting App..." >> log.txt
 git clone "https://github.com/eastcoreesolis/k8script.git"
 echo "//" >> log.txt
+
 echo "Creating App..." >> log.txt
 kubectl create -f ./k8script/namespace.yml >> log.txt
 kubectl --namespace=timeserv create -f ./k8script/service.yml >> log.txt
 kubectl --namespace=timeserv create -f ./k8script/deployment.yml >>log.txt
+
+echo "Creating tfinterview App..." >> log.txt
+kubectl create -f ./k8script/tfnamespace.yml >> log.txt
+kubectl --namespace=timeserv create -f ./k8script/tfservice.yml >> log.txt
+kubectl --namespace=timeserv create -f ./k8script/tfdeployment.yml >>log.txt
+
 echo "//" >> log.txt
 echo "Sleeping 4m..." >> log.txt
 sleep 4m
