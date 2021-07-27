@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: tfinterview
-        image: eastcoreesolis/core:1.6
+        image: eastcoreesolis/core:tfinterview
         ports:
         - containerPort: 8080
