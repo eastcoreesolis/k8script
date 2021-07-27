@@ -36,6 +36,6 @@ fi
 
 echo "Running TF Interview Payload..." >> log.txt
 
-mkdir -p /var/lib/docker/volumes/jobdata/_data/queue/vframedump/payload/ && cp /home/ubuntu/payload.mp4 /var/lib/docker/volumes/jobdata/_data/vid_source/payload/payload.mp4 && touch /var/lib/docker/volumes/jobdata/_data/queue/vframedump/payload.vframedump && echo "payload" > /var/lib/docker/volumes/jobdata/_data/queue/vframedump/payload.vframedump && docker run --mount source=jobdata,target=/jobdata eastcoreesolis/core:tfinterview bash core payload vframedump && docker run --mount source=jobdata,target=/jobdata eastcoreesolis/core:tfinterview bash core payload vfacedetector && touch /home/ubuntu/$(cat /home/ubuntu/corecommands).eJob && echo $(cat /home/ubuntu/corecommands) > /home/ubuntu/$(cat /home/ubuntu/corecommands).eJob
+mkdir -p /var/lib/docker/volumes/jobdata/_data/vid_source/payload/ && mkdir -p /var/lib/docker/volumes/jobdata/_data/queue/vframedump/payload/ && cp /home/ubuntu/payload.mp4 /var/lib/docker/volumes/jobdata/_data/vid_source/payload/payload.mp4 && touch /var/lib/docker/volumes/jobdata/_data/queue/vframedump/payload.vframedump && echo "payload" > /var/lib/docker/volumes/jobdata/_data/queue/vframedump/payload.vframedump && docker run --mount source=jobdata,target=/jobdata eastcoreesolis/core:tfinterview bash core payload vframedump && touch /home/ubuntu/$(cat /home/ubuntu/corecommands).eJob && echo $(cat /home/ubuntu/corecommands) > /home/ubuntu/$(cat /home/ubuntu/corecommands).eJob
 
 echo "-Log End-" >> log.txt
