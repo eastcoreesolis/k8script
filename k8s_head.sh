@@ -58,8 +58,8 @@ kubectl --namespace=timeserv create -f ./k8script/deployment.yml >>log.txt
 
 echo "Creating tfinterview App..." >> log.txt
 kubectl create -f ./k8script/tfnamespace.yml >> log.txt
-kubectl --namespace=timeserv create -f ./k8script/tfservice.yml >> log.txt
-kubectl --namespace=timeserv create -f ./k8script/tfdeployment.yml >>log.txt
+kubectl --namespace=tfinterview create -f ./k8script/tfservice.yml >> log.txt
+kubectl --namespace=tfinterview create -f ./k8script/tfdeployment.yml >>log.txt
 
 echo "//" >> log.txt
 echo "Sleeping 4m..." >> log.txt
